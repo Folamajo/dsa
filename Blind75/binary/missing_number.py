@@ -4,16 +4,23 @@ class Solution(object):
       :type nums: List[int]
       :rtype: int
       """
-      print(nums)
-      sorted_list = sorted(nums)
-      print(sorted_list)
+      #BRUTE FORCE
+      # sorted_list = sorted(nums)
+      # print(sorted_list)
 
-      for i in range(len(sorted_list)):
-         if i != sorted_list[i]:
-            return i
+      # for i in range(len(sorted_list)):
+      #    if i != sorted_list[i]:
+      #       return i
 
+      # O(N)
+
+      size = len(nums)
+      expected_sum = int(size * (size + 1 ) / 2)
+      sum_nums = sum(nums)
+      
+      return expected_sum - sum_nums
 
 
 solution = Solution()
-input = [9,6,4,2,3,5,7,0,1]
+input = [3, 0, 1]
 print(solution.missingNumber(input))
