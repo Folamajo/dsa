@@ -12,13 +12,13 @@ class Solution(object):
       #    if i != sorted_list[i]:
       #       return i
 
-      # O(N)
+      #O(N)
 
       size = len(nums)
-      expected_sum = int(size * (size + 1 ) / 2)
-      sum_nums = sum(nums)
+      expected_sum = int(size * (size + 1 ) / 2) #O(1)
+      sum_nums = sum(nums) #O(N)
       
-      return expected_sum - sum_nums
+      return expected_sum - sum_nums #O(1)
 
 
 solution = Solution()
