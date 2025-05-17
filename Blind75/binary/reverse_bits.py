@@ -13,10 +13,7 @@ class Solution:
          loop -= 1 
       
       return result 
-      # print(n)
-
         
-
 
 
 solution = Solution()
