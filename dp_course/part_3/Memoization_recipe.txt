@@ -1,0 +1,12 @@
+MAKE IT WORK
+- visualise the problem as a tree
+- implement the tree using recursion
+- test it 
+-Encode the arguments to the function into nodes we are drawing
+
+MAKE IT EFFICIENT
+- add a memo object
+- add a base case to return memo values 
+- store return values in the memo
+- Start your recursion tree with the input or target
+- build your memo with what changes (usually input) 
