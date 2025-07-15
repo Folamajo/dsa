@@ -12,7 +12,7 @@ def how_sum(target, numbers):
    for i in range(target + 1):
      if not table[i] == None:
         for num in numbers:
-           if i + num <= target and (table[i+num] == None):
+           if i + num <= target and (table[i+num] == None ):
               table[i + num] = table[i] + [num]
            
    return table[target]
@@ -20,3 +20,6 @@ def how_sum(target, numbers):
 print(how_sum(7, [5,3,4,7]))
 print(how_sum(8, [2, 3, 5]))
 print(how_sum(7, [2, 4]))
+
+# m = targetSum O(m^2n)
+# n = numbers.length O(m^2)
