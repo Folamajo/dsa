@@ -9,14 +9,7 @@ def can_construct_tab(target, word_bank):
                table[i+len(word)] = True
 
    return table[len(target)]
-   #    if table[i] == False:
-   #       for value in word_bank:
-   #          if target[i] in value:
-   #             table[i] = True
 
-   # if False in table:
-   #    return False
-   # return True
 
 
 print(can_construct_tab('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd'])) #True
