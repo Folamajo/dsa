@@ -6,4 +6,4 @@
 # You may reuse elements of `wordbank` as many times as needed
 
 def count_construct_tab(target, wordbank):
-   
+   table = [0] * (len(target) + 1)
