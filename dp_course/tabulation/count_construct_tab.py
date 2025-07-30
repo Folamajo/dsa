@@ -11,4 +11,28 @@ def count_construct_tab(target, wordbank):
 
    for i in range(len(table)):
       if table[i] > 0:
-         
+         for word in wordbank:
+            if target[i : i + len(word)] == word:
+               table[i + len(word)] += table[i]
+
+   return table[len(target)]
+
+
+print(count_construct_tab('purple', ['purp', 'p', 'ur', 'le', 'purpl']))
+
+# Time complexity:
+#    What causes time to grow : 
+#       - How many steps your loop runs
+#       - What happens inside each step 
+
+#    In this scenario: our outer loop -> for i in range(len(table)):
+#        runs the length of of our table 
+#        result in OUTER LOOP = O(n)
+#        For our inner loop we have "m" values in the wordbank ->  for word in wordbank:
+#           our loop will run "m" times
+#           results in inner loop = O(m)
+#        So far we have O(n * m )
+#        we have target[i : i + len(word)] == word 
+#        we are slicing the string -> slicing a string of length k take O(k) times
+#        so we have O(len(word))
+#        Our time complexity becomes =>  O(n * m * L)
