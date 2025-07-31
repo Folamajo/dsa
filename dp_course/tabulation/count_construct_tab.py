@@ -20,6 +20,9 @@ def count_construct_tab(target, wordbank):
 
 print(count_construct_tab('purple', ['purp', 'p', 'ur', 'le', 'purpl']))
 
+
+
+
 # Time complexity:
 #    What causes time to grow : 
 #       - How many steps your loop runs
@@ -35,4 +38,10 @@ print(count_construct_tab('purple', ['purp', 'p', 'ur', 'le', 'purpl']))
 #        we have target[i : i + len(word)] == word 
 #        we are slicing the string -> slicing a string of length k take O(k) times
 #        so we have O(len(word))
-#        Our time complexity becomes =>  O(n * m * L)
+#        TOTAL TIME COMPLEXITY =>  O(n * m * L)
+
+
+# SPACE COMPLEXITY 
+# we are storing our length of the of the table we constucted
+# table = [0] * (len(target) + 1 )
+# Space = O(n)
