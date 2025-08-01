@@ -3,4 +3,19 @@
 
 
 def all_construct(target, word_bank):
-   
+   table = [None] * (len(target) + 1) 
+   table[0] = [[]]
+
+   for i in range(len(table)):
+      if not table[i] == None:
+         for word in word_bank:
+            if target[i : i + len(word)] == word:
+               for word_list in table[i]:
+                  new_combination = word_list + [word]
+                  if table[i + len(word)] == None:
+                     table[i + len(word)] = []
+                  
+                  table[i + len(word)].append(new_combination)
+               # table[i : ]
+   return table[len(target)]
+print(all_construct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c']))

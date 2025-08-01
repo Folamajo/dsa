@@ -2,7 +2,7 @@ def can_construct_tab(target, word_bank):
    table = [False] * (len(target) + 1)
    table[0] = True
 
-   for i in range(len(target)):
+   for i in range(len(table)):
       if table[i] == True:
          for word in word_bank:
             if target[i : i + len(word)] == word:
