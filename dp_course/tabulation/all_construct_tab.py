@@ -19,3 +19,12 @@ def all_construct(target, word_bank):
                # table[i : ]
    return table[len(target)]
 print(all_construct('abcdef', ['ab', 'abc', 'cd', 'def', 'abcd', 'ef', 'c']))
+
+# TIME COMPLEXITY = O (m * n * W)
+# m: loop over wordBank
+# n: max path length / string copying
+# W: total number of possible combinations
+
+# SPACE COMPLEXITY = 0(n * W)
+# W = total number of valid combinations
+# n = maximum number of words per combination (since target length is n )
