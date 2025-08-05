@@ -1,0 +1,10 @@
+sliding window allows us to focus on a subset of data by focusing the most relevant option at any given time
+
+two types 
+   -> Fixed sliding window , maintains constant length as it slides across the data structure commonly used if window length is known in advance 
+   -> Dynamic window, expans and shrinks based on certain conditions
+
+Use sliding window when:
+   - working with array or strings
+   - the problem involves contiguous elements
+   - You need to optimize a brute-force approach(usually O(n^2))
