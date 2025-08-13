@@ -1,3 +1,5 @@
+#BRUTE FORCE
+
 def length_of_longest_substring(string):
 
    if len(string) == 1 :
