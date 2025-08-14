@@ -20,6 +20,21 @@ def length_of_longest_substring(string):
 
    return max_length
 
+# def length_of_longest_substring(string):
+
+#    if len(string) == 1:
+#       return 1 
+   
+#    max_length = 0
+#    start = 0
+#    stop = 1
+#    longest_string = []
+#    for i in range(len(string)):
+      
+      
+
+      # print(string[start], string[stop])
+      # return
 
 print(length_of_longest_substring("abcabcbb"))
 print(length_of_longest_substring("bbbbb"))
