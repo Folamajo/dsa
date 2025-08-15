@@ -20,6 +20,14 @@ def length_of_longest_substring(string):
 
    return max_length
 
+def length_of_longest_substring(string):
+   left = 0
+   right = 0
+   max_length = 0
+   window_chars = set()
+
+   for right in range(len(string)):
+
 # def length_of_longest_substring(string):
 
 #    if len(string) == 1:
