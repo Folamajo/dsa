@@ -1,4 +1,5 @@
 def min_window(s:str, t:str)-> str:
+   
    if len(t) > len(s):
       return ""
    
@@ -35,7 +36,21 @@ def min_window(s:str, t:str)-> str:
             have += 1
 
       while have == need:
-           
+         #Decrement left in our window 
+         curr_window_length = right - left + 1 
+         if curr_window_length < best_window:
+            best_window = curr_window_length
+            best_start = left
+            best_end = right   
+
+         c = s[left]
+         window_count[c] -= 1
+
+         if c in t_count and window_count[c] < t_count[c]:
+            left += 1 
 
 
-   return 
+         
+
+
+   return s[best_start : best_end + 1]
