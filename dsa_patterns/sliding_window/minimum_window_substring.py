@@ -47,10 +47,16 @@ def min_window(s:str, t:str)-> str:
          window_count[c] -= 1
 
          if c in t_count and window_count[c] < t_count[c]:
-            left += 1 
+            have -= 1
+         left += 1
 
 
          
+   if best_start == -1:
+      return ""
+   else:
+      return s[best_start : best_end + 1]
 
 
-   return s[best_start : best_end + 1]
+if __name__ == "__main__":
+   print(min_window("ADOBECODEBANC", "ABC"))
