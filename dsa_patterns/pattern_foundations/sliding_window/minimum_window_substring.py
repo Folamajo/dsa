@@ -22,7 +22,7 @@ def min_window(s:str, t:str)-> str:
 
    best_window= float("inf")
    best_start = -1
-   bext_end = -1 
+   best_end = -1 
 
    for right in range(len(s)):
       curr_char = s[right]
