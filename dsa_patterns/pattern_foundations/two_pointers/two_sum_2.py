@@ -2,7 +2,6 @@ def two_sum(nums: list, target: int):
    left = 0 
    right = len(nums) - 1
 
-   # for right in range(len(nums)):
    while left < right:
       if (nums[left] + nums[right]) == target:
 
