@@ -6,8 +6,9 @@ def trap(input:list)->int:
    right = (len(input) -1 )
    max_left = left
    max_right = right
-   trapped_water = 0 
+   result = 0 
 
    while left < right:
-      if input[max_left] < input[max_right]:
-         left += 1
+      if input[left] < input[right]:
+         if input[left] > input[max_left]:
+            max_left = left
