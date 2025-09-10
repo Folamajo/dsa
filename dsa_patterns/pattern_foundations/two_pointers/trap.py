@@ -4,11 +4,13 @@ def trap(input:list)->int:
    
    left = 0
    right = (len(input) -1 )
-   max_left = left
-   max_right = right
+   max_left = input[left]
+   max_right = input[right]
    result = 0 
 
    while left < right:
       if input[left] < input[right]:
          if input[left] > input[max_left]:
-            max_left = left
+            max_left = input[left]
+         else:
+            result += input[max_left] - input[left]
