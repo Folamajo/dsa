@@ -15,7 +15,7 @@ def remove_duplicates(nums: list):
       
    
    
-
+#Get time complexity
 
 input = [1,1,2]
 print(remove_duplicates(input))
