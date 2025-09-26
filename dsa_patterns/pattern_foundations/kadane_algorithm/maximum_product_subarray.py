@@ -1,5 +1,5 @@
 def max_product(nums: list):
-
+   #We want to keep the max and minimimum 
    
    curr_max = nums[0]
    curr_min = nums[0]
