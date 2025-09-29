@@ -1,18 +1,22 @@
-def max_product(nums: list):
+def max_product(nums: list) -> int:
+   current_max = current_min = max_product = nums[0]
+
+   for i in range(1, len(nums)):
+      prev_max = current_max
+      prev_min = current_min
+
+      current_max = max (nums[i], prev_max * nums[i], prev_min * nums[i])
+      current_min = min(nums[i], prev_max * nums[i], prev_min * nums[i])
+
+      max_product = max(current_max, current_min)
+   
+   return max_product
+     
    #We want to keep the max and minimimum 
    
-   curr_max = nums[0]
-   curr_min = nums[0]
-   max_product = nums[0]
 
-   for i in range(len(nums)):
-      curr_max = max(nums[i], (nums[i] * curr_max))
-      curr_min = min (nums[i], (nums[i] * curr_min) )
-      max_product = max(curr_max, max_product)
-
-   return 
 
 
 if __name__ == "__main__":
-   input = [-2]
+   input = [2,3,-2,4]
    print(max_product(input))
