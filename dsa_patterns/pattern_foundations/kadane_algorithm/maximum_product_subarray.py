@@ -8,7 +8,7 @@ def max_product(nums: list) -> int:
       current_max = max (nums[i], prev_max * nums[i], prev_min * nums[i])
       current_min = min(nums[i], prev_max * nums[i], prev_min * nums[i])
 
-      max_product = max(current_max, current_min)
+      max_product = max(max_product, current_max, current_min)
    
    return max_product
      
