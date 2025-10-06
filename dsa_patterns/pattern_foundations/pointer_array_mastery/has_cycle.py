@@ -1,5 +1,5 @@
-def hasCycle(head):
-
+def hasCycle(head) -> bool:
+   slow = fast = head
 
 
 if __name__ == "__main__" :
@@ -16,3 +16,9 @@ if __name__ == "__main__" :
 # FASTER SOLUTION
 # Floyd's cycle detection
 # Move one pointer slowly (one step at a time) and another pointer faster(two steps at a time)
+#The idea is that as we move each poiinter there will eventually be a point where both pointers meet if there is a cycle
+# If there is no cycle the fast pointer will eventually keep going till it reaches null then there is no loop and we return false 
+# if both our pointers eventually collide at a point we one of our values back to the head and move both by one step the point where they both collide again is our start pointer of the cycle
+
+# IMPLEMENTATION
+# 
