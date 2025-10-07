@@ -1,10 +1,27 @@
+class ListNode: 
+   def __init__(self, data: int, next: "ListNode" = None):
+      self.data = data
+      self.next = next
+      
+
+
+
+
 def hasCycle(head) -> bool:
    slow = fast = head
+
+   while fast and fast.next: 
+      slow = slow.next
+      fast = fast.next.next
+      if slow == fast:
+         return True
+   return False
+
 
 
 if __name__ == "__main__" :
    input = [3, 2, 0, -4]
-
+   print(hasCycle(input))
 # WHAT IS A LINKED LIST CYCLE
 # A linked list has a cycle if there is a node in the list that we continuously reach when we keep following the next pointer
 # so usually in a linked list if we keep following the pointer we would reach null.  In this case we would just end up back at one of the nodes
@@ -21,4 +38,7 @@ if __name__ == "__main__" :
 # if both our pointers eventually collide at a point we one of our values back to the head and move both by one step the point where they both collide again is our start pointer of the cycle
 
 # IMPLEMENTATION
-# 
+# We set both our slow and fast to the head
+# We set our while loop to track if fast and fast.next is true 
+# We then check if our slow and fasst ever reach this means we have a cycle we simply return True
+# else we return at the end of our loop False
