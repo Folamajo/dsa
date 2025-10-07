@@ -20,8 +20,20 @@ def hasCycle(head) -> bool:
 
 
 if __name__ == "__main__" :
-   input = [3, 2, 0, -4]
-   print(hasCycle(input))
+
+   head = ListNode(3)
+   second_node = ListNode(2)
+   third_node = ListNode(0)
+   fourth_node = ListNode(-4)
+
+   head.next = second_node
+   second_node.next = third_node
+   third_node.next = fourth_node
+   fourth_node.next = second_node
+
+
+   # input = [3, 2, 0, -4]
+   print(hasCycle(head))
 # WHAT IS A LINKED LIST CYCLE
 # A linked list has a cycle if there is a node in the list that we continuously reach when we keep following the next pointer
 # so usually in a linked list if we keep following the pointer we would reach null.  In this case we would just end up back at one of the nodes
