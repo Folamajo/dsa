@@ -34,6 +34,8 @@ if __name__ == "__main__" :
 
    # input = [3, 2, 0, -4]
    print(hasCycle(head))
+
+
 # WHAT IS A LINKED LIST CYCLE
 # A linked list has a cycle if there is a node in the list that we continuously reach when we keep following the next pointer
 # so usually in a linked list if we keep following the pointer we would reach null.  In this case we would just end up back at one of the nodes
@@ -53,4 +55,11 @@ if __name__ == "__main__" :
 # We set both our slow and fast to the head
 # We set our while loop to track if fast and fast.next is true 
 # We then check if our slow and fasst ever reach this means we have a cycle we simply return True
-# else we return at the end of our loop False
+# else we return at the end of our loop 
+
+#TIME COMPLEXITY
+# Each pointer moves at most a constant number of times per node before they either meet or hit Node. they both cover linear time
+# So time complexity is O(n)
+
+# SPACE COMPLEXITY
+# We are not storing extra data structures so our space complexity is O(1)
