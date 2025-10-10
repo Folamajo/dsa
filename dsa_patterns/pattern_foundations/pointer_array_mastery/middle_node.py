@@ -4,10 +4,18 @@ class ListNode :
       self.next = next
 
    
-   def printNode(node:"ListNode"):
-      while node.next:
-         print(node.data)
-      return
+   def print_node(self):
+      node = self
+      while node:
+         print(node.data, end = " -> ")
+         if node.next:
+            node = node.next
+         else: 
+            print("null")
+            return 
+    
+
+      
 
 
 def middle_node(head:ListNode) -> ListNode:
@@ -31,7 +39,10 @@ if __name__ == "__main__" :
    third.next = fourth
    fourth.next = fifth
 
-   print(middle_node(head))
+   middle_node(head).print_node()
+
+
+
 
 # QUESTION 
 # Given the head of a singly linked list, return the middle node of the linked list.
