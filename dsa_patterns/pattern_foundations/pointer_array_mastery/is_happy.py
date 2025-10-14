@@ -1,5 +1,6 @@
 def is_happy(input:int)->bool:
    
+   
    def get_next(num):
       sum = 0 
       for digit in str(num):
@@ -8,14 +9,19 @@ def is_happy(input:int)->bool:
 
    fast = slow = input
 
+   if input == 1:
+      return True
+   
+
    while True:
       slow = get_next(slow)
       fast = get_next(get_next(fast))
-
-      if slow == fast:
-         return False
-      elif fast == 1 or slow == 1:
+      
+      if fast == 1 or slow == 1:
          return True
+      elif slow == fast:
+         return False
+      
 
 
 if __name__ == "__main__":
