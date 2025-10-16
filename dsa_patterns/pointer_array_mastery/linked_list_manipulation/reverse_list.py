@@ -1,8 +1,47 @@
-def reverse_list(head):
+class ListNode:
+   def __init__(self, data: int, next : "ListNode" = None):
+      self.data = data
+      self.next = next
+
+
+   def print_node(self):
+      node = self 
+      while node:
+         print(node.data, end = " --> ")
+         if node.next:
+            node = node.next
+         else:
+            print("null")
+            return
+
+
+
+def reverse_list(head) -> ListNode:
+   prev = None
+   current = head
+
+   while not current is None:
+      next = current.next
+      current.next = prev
+      prev = current
+      current = next
+   return prev
+
 
 
 if __name__ == "__main__":
+   first =  ListNode(1)
+   second = ListNode(2)
+   third = ListNode(3)
+   fourth = ListNode(4)
+   fifth = ListNode(5)
 
+   first.next = second
+   second.next = third
+   third.next = fourth
+   fourth.next = fifth
+
+   print(reverse_list(first).print_node())
 
 #QUESTION
 # Given the head of a singly linked list, reverse the list, and return the reversed list.
