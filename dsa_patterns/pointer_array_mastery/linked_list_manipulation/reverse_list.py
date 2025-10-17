@@ -61,3 +61,12 @@ if __name__ == "__main__":
    # prev = current 
    # current = next
 # return prev # this will be the new head
+
+
+#TIME COMPLEXITY
+   # You traverse the list once, touch each node exactly one time
+   # TIME -> O(n)
+
+#SPACE COMPLEXITY 
+   # SPACE -> O(1)
+   # We only used three pointers (prev, current, next)
