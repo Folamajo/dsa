@@ -1,5 +1,28 @@
+class ListNode:
+   def __init__ (self, data: int, next:"ListNode" = None):
+      self.data = data
+      self.next = next
+   
 
+def merge_two_lists(list1, list2)->ListNode : 
+   dummy = ListNode(0)
+   tail = dummy
 
+   while list1 and list2:
+      if (list1.data <= list2.data):
+         tail.next = list1
+         list1 = list1.next
+      else:
+         tail.next = list2
+         list2 = list2.next
+
+      tail = tail.next
+   if list1 == None:
+      tail.next = list2
+   elif list2 == None:
+      tail.next = list1
+   return dummy.next
+      
 # QUESTION
 # You are given the heads of two sorted linked lists list1 and list2.
 # Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
@@ -24,3 +47,9 @@
 #        Move tail forward
 #     Attach rest of the list to the tail
 #     return Merged list head
+
+
+#TIME COMPLEXITY 
+# O(n) we visit each node once
+# SPACE COMPLEXITY
+# O(1) we reused existing nodes only constant pointers
