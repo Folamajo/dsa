@@ -1,15 +1,53 @@
 class ListNode: 
-   def __init__(self, val:int=0, next:"ListNode" = None):
-      self.val = val
+   def __init__(self, data:int=0, next:"ListNode" = None):
+      self.data = data
       self.next = next
 
+   def print_node(self):
+      node = self 
+      while node:
+         print(node.data, end = " --> ")
+         if node.next:
+            node = node.next
+         else:
+            print("null")
+            return
 
-def remove_nth_from_end(head:ListNode, n: int):
 
+def remove_nth_from_end(head:ListNode, n: int)->ListNode:
+   dummy = ListNode(0)
+   dummy.next = head
+   front = back = dummy
+   counter = 0
+   while front :
+      if counter < n + 1:
+         front = front.next
+         counter += 1
 
+      else:
+         front = front.next
+         back = back.next
+
+   back.next = back.next.next
+   return dummy.next
 
 
 if __name__ == "__main__":
+
+   first =  ListNode(1)
+   second = ListNode(2)
+   third = ListNode(3)
+   fourth = ListNode(4)
+   fifth = ListNode(5)
+
+   first.next = second
+   second.next = third
+   third.next = fourth
+   fourth.next = fifth
+
+   print(remove_nth_from_end(first, n=2).print_node())
+
+
 # QUESTION 
 # https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 
