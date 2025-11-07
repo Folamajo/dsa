@@ -1,0 +1,19 @@
+class MyQueue: 
+   def __init__(self):
+      self.input = []
+      self.output = []
+
+   def push(self, x: int)-> None:
+      self.input.append(x)
+      return
+   
+   def pop(self) -> int:
+      if len(self.output) == 0 :
+         
+
+# A QUEUE is a data structure that follows the First-In, First Out (FIFO) principle
+# Enqueue is the operation to add an element to the back of the queue. 
+# Dequeue is the operation to remove an element from the front of the queue.
+
+# A STACK is a data structure that follow the Last-In, First-Out(LIFO) principle the last element
+# The last one added is the the first one removed. 
