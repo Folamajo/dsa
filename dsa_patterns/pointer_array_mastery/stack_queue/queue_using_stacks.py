@@ -9,6 +9,12 @@ class MyQueue:
    
    def pop(self) -> int:
       if len(self.output) == 0 :
+         for i in range(len(self.input)-1, -1, -1):
+            self.output.append(self.input[i])
+      
+      return self.output.pop()
+
+
          
 
 # A QUEUE is a data structure that follows the First-In, First Out (FIFO) principle
