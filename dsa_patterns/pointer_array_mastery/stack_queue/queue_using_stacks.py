@@ -18,10 +18,7 @@ class MyQueue:
       if len(self.output) == 0:
          for i in range(len(self.input) - 1, -1, -1):
             self.output.append(self.input[i])
-      
-         return self.output[len(self.output) - 1]
 
-      
       return self.output[len(self.output) - 1]
 
    def empty(self) -> bool : 
