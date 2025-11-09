@@ -14,8 +14,20 @@ class MyQueue:
       
       return self.output.pop()
 
+   def peek(self) -> int | None:
+      if len(self.output) == 0:
+         for i in range(len(self.input) - 1, -1, -1):
+            self.output.append(self.input[i])
+      
+         return self.output[len(self.output) - 1]
 
-         
+      
+      return self.output[len(self.output) - 1]
+
+   def empty(self) -> bool : 
+      if len(self.output) == 0  and   len(self.input) == 0:
+         return True
+      return False 
 
 # A QUEUE is a data structure that follows the First-In, First Out (FIFO) principle
 # Enqueue is the operation to add an element to the back of the queue. 
