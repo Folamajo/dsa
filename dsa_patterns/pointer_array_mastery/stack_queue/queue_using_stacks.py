@@ -9,15 +9,15 @@ class MyQueue:
    
    def pop(self) -> int:
       if len(self.output) == 0 :
-         for i in range(len(self.input)-1, -1, -1):
-            self.output.append(self.input[i])
-      
+         while self.input:
+            self.output.append(self.input.pop())
+
       return self.output.pop()
 
    def peek(self) -> int | None:
-      if len(self.output) == 0:
-         for i in range(len(self.input) - 1, -1, -1):
-            self.output.append(self.input[i])
+      if len(self.output) == 0 :
+         while self.input:
+            self.output.append(self.input.pop())
 
       return self.output[len(self.output) - 1]
 
@@ -32,3 +32,5 @@ class MyQueue:
 
 # A STACK is a data structure that follow the Last-In, First-Out(LIFO) principle the last element
 # The last one added is the the first one removed. 
+
+
