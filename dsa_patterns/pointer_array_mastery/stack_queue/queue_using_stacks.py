@@ -34,3 +34,8 @@ class MyQueue:
 # The last one added is the the first one removed. 
 
 
+#  TIME COMPLEXITY 
+#  Since elements is moved at most once between stacks, its total "work" is constant over its entire lifetime. That's why even though a single transfer looks costly, when averaged out over many operations each operations cost O(1)
+
+#  SPACE COMPLEXITY 
+# Since the two stacks always hold exactly the elements that are currently in the queue no extra copies hanging around long term the total space of our data structure uses grows linearly with the number of items in the queue So space is O(n)
