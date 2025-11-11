@@ -30,7 +30,7 @@ class MyQueue:
 # Enqueue is the operation to add an element to the back of the queue. 
 # Dequeue is the operation to remove an element from the front of the queue.
 
-# A STACK is a data structure that follow the Last-In, First-Out(LIFO) principle the last element
+# A STACK is a data structure that follow the Last-In, First-Out(LIFO) principle the last element.
 # The last one added is the the first one removed. 
 
 
