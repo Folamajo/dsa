@@ -25,3 +25,8 @@ class MinStack:
    def getMin(self) -> int:
       if len(self.stack) > 0:
          return min(self.stack) 
+      
+
+
+# Time Complexity: each of our function is O(1)
+# Space Complexity: we are storing two stacks 2n so it is O(n)
