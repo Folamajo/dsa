@@ -4,7 +4,7 @@ def nextGreaterElement(nums1:list[int], nums2: list[int]) -> list[int]:
    dict = {}
 
    for i in range( len(nums2)):
-      if len(stack) == 0 :
+      if len(stack) == 0 or nums2[i] < stack[-1]:
          stack.append(nums2[i])
       else: 
          if nums2[i] > stack[-1]:
@@ -17,7 +17,8 @@ if __name__ == "__main__":
    nums1 = [4,1,2]
    nums2 = [1,3,4,2]
    print(nextGreaterElement(nums1, nums2))
-#Brute force 
+
+# Brute force 
 # For each number in nums1:
 # Find where that number appears in nums2
 # From that index, scan to the right
