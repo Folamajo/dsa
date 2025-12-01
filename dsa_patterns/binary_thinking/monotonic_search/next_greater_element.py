@@ -2,16 +2,27 @@
 def nextGreaterElement(nums1:list[int], nums2: list[int]) -> list[int]:
    stack = []
    dict = {}
-
+   result = []
+   
    for i in range( len(nums2)):
-      if len(stack) == 0 or nums2[i] < stack[-1]:
+      if len(stack) == 0 :
          stack.append(nums2[i])
       else: 
          if nums2[i] > stack[-1]:
-            stack.pop()
+            remove = stack.pop()
+            dict[remove] = nums2[i]
             stack.append(nums2[i])
+         elif nums2[i] < stack[-1] :
+             dict[stack[-1]] = -1
+             stack.append(nums2[i])
 
-   return stack
+      dict[nums2[-1]] = -1
+
+   for i in range(len(nums1)):
+      if nums1[i] in dict:
+         result.append(dict[nums1[i]])
+
+   return result
 
 if __name__ == "__main__":
    nums1 = [4,1,2]
