@@ -12,9 +12,10 @@ def nextGreaterElement(nums1:list[int], nums2: list[int]) -> list[int]:
          while stack and nums2[i] > stack[-1]:
             remove = stack.pop()
             dict[remove] = nums2[i]
-   
-      stack.append(nums2[i])
-      dict[nums2[-1]] = -1
+         stack.append(nums2[i])
+   if len(stack) > 0:
+      for i in range(len(stack)):
+         dict[stack[i]] = -1
    
    for i in range(len(nums1)):
       if nums1[i] in dict:
@@ -22,8 +23,8 @@ def nextGreaterElement(nums1:list[int], nums2: list[int]) -> list[int]:
    return dict
 
 if __name__ == "__main__":
-   nums1 = [1,3,5,2,4]
-   nums2 = [6,5,4,3,2,1,7]
+   nums1 = [4,1,2]
+   nums2 = [1,3,4,2]
    print(nextGreaterElement(nums1, nums2))
 
 # Brute force 
@@ -37,21 +38,3 @@ if __name__ == "__main__":
 
 #Stack is LIFO   
 
-
-# # for i in range( len(nums2)):
-   #    if len(stack) == 0 :
-   #       stack.append(nums2[i])
-   #    else: 
-   #       if nums2[i] > stack[-1]:
-   #          remove = stack.pop()
-   #          dict[remove] = nums2[i]
-   #          stack.append(nums2[i])
-   #       elif nums2[i] < stack[-1] :
-   #           dict[stack[-1]] = -1
-   #           stack.append(nums2[i])
-
-   #    dict[nums2[-1]] = -1
-
-   # for i in range(len(nums1)):
-   #    if nums1[i] in dict:
-   #       result.append(dict[nums1[i]])
