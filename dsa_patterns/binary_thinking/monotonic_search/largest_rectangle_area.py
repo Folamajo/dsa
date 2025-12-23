@@ -3,7 +3,19 @@ def largestRectangleArea(heights:list[int])->int:
    max_area = 0 
 
    for i in range(len(heights) + 1):
-      if heights[i] < 
+      if i == len(heights):
+         current_height = 0
+      else: current_height = heights[i]
+
+      while stack and current_height < heights[stack[-1]]:
+         top = stack.pop()
+         top_height = heights[top]
+         if len(stack) == 0:
+            left_boundary = -1
+         else: left_boundary = stack[-1]
+
+         width = current_height
+
 #CONCEPT
 # The stack stores indices in increasing height order
 # A bar is removed when a shorter bar appears.
