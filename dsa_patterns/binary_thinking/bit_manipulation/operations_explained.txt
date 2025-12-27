@@ -1,0 +1,8 @@
+Bitwise operations manipulate individual bits (0s and 1s) within numbers, performing actions like AND, OR, XOR (comparing bits), NOT (flipping bits), and Shifts (moving bits left or right). They are fundamental for low-level tasks, efficient data packing (like flags in a byte), encryption, and hardware control, often being much faster than traditional arithmetic, especially on resource-constrained devices. 
+Common Bitwise Operators
+   - AND (&): Returns 1 only if both corresponding bits are 1; otherwise 0. (e.g., 1 & 1 = 1, 1 & 0 = 0).
+   - OR (|): Returns 1 if either corresponding bit is 1; otherwise 0. (e.g., 1 | 0 = 1, 0 | 0 = 0).
+   - XOR (^): Returns 1 if the bits are different (one is 1, the other 0); otherwise 0. (e.g., 1 ^ 0 = 1, 1 ^ 1 = 0).
+   - NOT (~): Inverts all bits (0 becomes 1, 1 becomes 0).
+   - Left Shift (<<): Moves bits to the left, filling vacated spots with 0s (equivalent to multiplying by powers of 2).
+   - Right Shift (>>): Moves bits to the right, discarding bits shifted off (can be arithmetic or logical, affecting sign for signed numbers). 
