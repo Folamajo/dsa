@@ -1,9 +1,15 @@
 def hamming_weight(n:int)-> int:
    num_set_bits = 0
-   temp_n = n 
 
-   while not temp_n == 0:
-      
+
+   while not n == 0:
+      n = n & (n - 1)
+      num_set_bits += 1
+   return num_set_bits
+
+if __name__ == "__main__":
+   n = 11
+   print(hamming_weight(n))
 #CONCEPT
 # We are calculating the number of 1's in the binary representation of a value
 # The rightmost is called the Least Significant Bit(LSB)
@@ -11,6 +17,8 @@ def hamming_weight(n:int)-> int:
 #  It changes most often: 
    # if it is 1 the number is odd 
    # if it is 0, the number is even 
+
+# Subtracting 1 changes the LSB 
 
 # We are working with pure integers and bit operations
 # We start with a number n
