@@ -1,3 +1,8 @@
+Bits are the smallest units of information in computing, each holding a value of either 0 or 1, like tiny on–off switches inside a computer. Everything a computer works with numbers, text, images, sound, instructions is ultimately broken down into long patterns of these two states. By agreeing on how to interpret those patterns, computers can represent meaning using nothing more than electricity being present or absent.
+
+Example: the letter A is stored as the binary pattern 01000001 in ASCII. That sequence is eight bits, and together those bits tell the computer to show the character A on your screen.
+
+
 Bitwise operations manipulate individual bits (0s and 1s) within numbers, performing actions like AND, OR, XOR (comparing bits), NOT (flipping bits), and Shifts (moving bits left or right). They are fundamental for low-level tasks, efficient data packing (like flags in a byte), encryption, and hardware control, often being much faster than traditional arithmetic, especially on resource-constrained devices. 
 Common Bitwise Operators
    - AND (&): Returns 1 only if both corresponding bits are 1; otherwise 0. (e.g., 1 & 1 = 1, 1 & 0 = 0).
@@ -6,3 +11,12 @@ Common Bitwise Operators
    - NOT (~): Inverts all bits (0 becomes 1, 1 becomes 0).
    - Left Shift (<<): Moves bits to the left, filling vacated spots with 0s (equivalent to multiplying by powers of 2).
    - Right Shift (>>): Moves bits to the right, discarding bits shifted off (can be arithmetic or logical, affecting sign for signed numbers). 
+
+
+BIT WISE CHEAT SHEET
+&	AND	keeps bits only if both are 1
+`	`	OR
+^	XOR	sets bit if bits differ
+~	NOT	flips bits
+<<	Left shift	moves bits left
+>>	Right shift	moves bits right
