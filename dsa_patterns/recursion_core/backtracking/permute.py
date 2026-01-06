@@ -1,6 +1,11 @@
 def permute(nums: list[int])-> list[list[int]]:
    permutations = []
 
+   def helper(partialPerm: list[int]):
+      if len (partialPerm) == len(nums):
+         permutations.append(list(partialPerm))
+         return 
+
 
 # CONCEPT
 # A permutation is complete when it contains every number exactly once and its length matches the original input size
@@ -15,3 +20,6 @@ def permute(nums: list[int])-> list[list[int]]:
 #  The moment a choice violates the rules that branch never exists.
 #  So the algoritm constructs only legal permutations from the start.
 # We need a helper function whose job is to explore permutations from a given state
+# A permutatun is complete when: 
+# - It contains every number exactly once
+# - its length matches the original input 
