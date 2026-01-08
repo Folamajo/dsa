@@ -2,10 +2,16 @@ def permute(nums: list[int])-> list[list[int]]:
    permutations = []
 
    def helper(partialPerm: list[int]):
+      # base case
       if len (partialPerm) == len(nums):
          permutations.append(list(partialPerm))
          return 
-
+      
+      for num in nums:
+         if not num in partialPerm:
+            partialPerm.append(num)
+            helper(partialPerm)
+            partialPerm.pop()
 
 # CONCEPT
 # A permutation is complete when it contains every number exactly once and its length matches the original input size
