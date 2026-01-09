@@ -16,9 +16,14 @@ def permute(nums: list[int])-> list[list[int]]:
    helper([])
    return permutations
 
+
+
+
 if __name__ == "__main__":
    nums = [1,2,3]
    print(permute(nums))
+
+   
 # CONCEPT
 # A permutation is complete when it contains every number exactly once and its length matches the original input size
 # a number can be added to the partial permutation if the number doesnt already exist in the partial permutation and if it is   present in the original input
