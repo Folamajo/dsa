@@ -40,3 +40,6 @@ if __name__ == "__main__":
 # A permutatun is complete when: 
 # - It contains every number exactly once
 # - its length matches the original input 
+
+
+# - 
