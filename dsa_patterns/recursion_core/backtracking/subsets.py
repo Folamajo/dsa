@@ -2,6 +2,7 @@ def subsets(nums:list[int])->list[list[int]]:
    subsets = []
    def helper(subset:list[int], start: int):
       subsets.append(list(subset))
+      for i in range(start, len(nums)):
 
 if __name__ == "__main__":
    nums = [1,2,3]
