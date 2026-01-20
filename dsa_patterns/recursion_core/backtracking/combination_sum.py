@@ -26,3 +26,15 @@ if __name__ == "__main__":
    nums = [2,3,6,7]
    target = 7 
    print(combination_sum(nums, target))
+
+# TIME COMPLEXITY
+# Time complexity is determined by the size of the recursion tree (number of explored paths)
+# The number of candidates from start to end determines how many branches each node in the recursion tree can have
+# max depth = target / min(candidates)
+# Rough upper bound -> (O (n ^ target/min))
+# Output cost factor -> 
+
+# SPACE COMPLEXITY
+# What dominates the auxillary space
+# The recursion stack and the current path
+# O (target / min (candidates))
