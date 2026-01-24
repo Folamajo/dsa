@@ -1,5 +1,9 @@
 def letter_combinations(digits: str ) -> list[str]: 
-
+   # Add guard
+   if len(digits) == 0:
+      return []
+   
+   result = []
 
 
 if __name__ == "__main__":
