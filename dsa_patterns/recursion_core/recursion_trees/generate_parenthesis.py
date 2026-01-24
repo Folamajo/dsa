@@ -24,3 +24,13 @@ if __name__ == "__main__":
 # This is considered a pruned recursion tree because invalid partial strings are never allowed to be created
 # Generate parenthesis takes a two stage approach, We define the constraints clearly, then let the recursion explore ony valid branches
 # We create a helper function that builds the string incrementally while tracking counts
+
+
+#  Time complexity
+#  The number of valid parentheses strings that exist for a given n is the ->  nth Catalan number
+#  Since the algorithm generartes all valid strings and each valid string has length 2n the time complexity is then -> O(n . Catalan(n))
+#  The extra n factor come from the algorithm producing / storing each completed string costs O(n)
+
+# SPACE COMPLEXITY
+# The maximum recursion stack -> O(n)
+# WHen we include the space needed to store all valid parenthesis strings, the total space complexity is O(n . Catalan(n))
