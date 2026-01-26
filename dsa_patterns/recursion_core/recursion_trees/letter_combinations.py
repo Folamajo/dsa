@@ -28,3 +28,12 @@ if __name__ == "__main__":
 #  We stop and record a result when the length of the built string equals the numbder of digits 
 #  The number of letters mapped to the current digit will determine how many branches the nodes will have
 #  No prunning is needed because every partial string can become valid. 
+
+
+#  TIME COMPLEXITY
+#  The input has n digits each digit maps to most 4 letters so in the wort case scenario we can map to O(4 ^ n) leaf nodes
+#  So time complexity is O(n * 4 ^ n)
+
+#  SPACE COMPLEXITY
+#  For the stack only the space complexity dure to the reursion stack and current path in terms of n digits is B
+#  The space nneded to store all combinations is O(n * 4n)
