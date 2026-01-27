@@ -16,7 +16,7 @@ def generateParenthesis(n: int) -> list[str]:
 if __name__ == "__main__":
    n = 3
    print(generateParenthesis(n))
-# The fundamental goal of the recursion is to build only strings where every prefic has more '(' than ')'
+# The fundamental goal of the recursion is to build only strings where every prefix has more '(' than ')'
 # So when building our string the number of ')' used so far must never exceed the number of '(' used so far
 # Each node in the three represents a partially build string with cound of '(' and ')' used so far
 # We close the branch by add ')' when the number of '(' used so far is greater thna the number of ')'
