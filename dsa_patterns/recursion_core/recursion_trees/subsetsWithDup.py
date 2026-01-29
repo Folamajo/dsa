@@ -3,7 +3,7 @@ def subsetsWithDup(nums: list[int])->list[list[int]]:
    result = []
 
    def backtrack(path, index):
-      result.append(path)
+      result.append(list(path))
       for i in range(index, len(nums)):
          if i > index and nums[i] == nums[i - 1]:
             continue
@@ -11,7 +11,7 @@ def subsetsWithDup(nums: list[int])->list[list[int]]:
          path.append(nums[i])
          backtrack(path, i + 1)
          path.pop()
-   backtrack([])
+   backtrack([], 0)
    return result
 # In subsets II we must avoid generating duplicate subsets
 
