@@ -23,8 +23,11 @@ def maxAreaOfIslands(grid: list[list[int]])-> int:
       for col in range(cols):
          if grid[row][col] == 1:
             area = dfs(row, col)
+            print(type(area), type(max_area))
             max_area = max(max_area, area)
    return max_area
+
+
 if __name__ == "__main__":
    grid = [ [0,0,1,0,0,0,0,1,0,0,0,0,0],
             [0,0,0,0,0,0,0,1,1,1,0,0,0],
@@ -41,3 +44,10 @@ if __name__ == "__main__":
 # In number if islands DFS did not return anything it just sank the islands that we checked. Here we actually want to return the number of cells in the current island so that we can track the max.
 # We receive the area from DFS and we update the max_area
 # The area of the island should be calculated by Returning 1+ sum of areas from all four recursive neighbours
+
+
+# TIME COMPLEXITY 
+# The grid has m rows and n columns so it is O(m x n)
+
+# SPACE COMPLEXITY 
+#
