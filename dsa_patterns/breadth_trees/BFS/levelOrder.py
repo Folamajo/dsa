@@ -39,3 +39,9 @@ if __name__ == "__main__":
    root.right.left = TreeNode(15)
    root.right.right = TreeNode(7)
    print(levelOrder(root))
+
+
+
+
+# TIME COMPLEXITY: There are N nodes, time complexity = O(n)
+# SPACE COMPLEXITY: Consider the max number of nodes in the queue at once at the worst case this would be a full level = O(n)
