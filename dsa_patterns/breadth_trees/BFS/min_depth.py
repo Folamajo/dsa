@@ -36,3 +36,8 @@ if __name__ == "__main__":
    root.right.right = TreeNode(7)
 
    print(minDepth(root))
+
+
+
+# TIME COMPLEXITY: If there are n nodes and each node is visited at most once => O(n)
+# SPACE COMPLEXITY: Queue can hold up to the max width of the tree => O(n)
