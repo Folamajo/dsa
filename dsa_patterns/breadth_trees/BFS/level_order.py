@@ -20,6 +20,7 @@ def levelOrder(root: [TreeNode]) -> list[list[int]]:
 
       for _ in range(level_size):
          node = queue.popleft()
+        
          level.append(node.val)
 
          if node.left:
@@ -32,7 +33,7 @@ def levelOrder(root: [TreeNode]) -> list[list[int]]:
    return result
 
 if __name__ == "__main__":
-   # root = [3, 9, 20, None, None, 15, 7]
+
    root = TreeNode(3)
    root.left = TreeNode(9)
    root.right = TreeNode(20)
