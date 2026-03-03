@@ -22,6 +22,10 @@ def letter_combinations(digits: str ) -> list[str]:
 if __name__ == "__main__":
    digits = '23'
    print(letter_combinations(digits))
+
+
+
+   
 # CONCEPT
 #  In letter cmbinations, each level of the recursion tree corresponds to one digit in the input string
 #  The index of the current digit and the partially buil string represent the state at each recursion node
