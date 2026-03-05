@@ -15,7 +15,6 @@ def rottingOranges(grid:list[list[int]]) -> int:
       for col in range(cols):
          curr_orange = grid[row][col]
          if curr_orange == 2:
-
             queue.append([row, col])
          
          elif curr_orange == 1: 
@@ -37,7 +36,9 @@ def rottingOranges(grid:list[list[int]]) -> int:
                   grid[new_row][new_col] = 2
                   queue.append([new_row, new_col])
                   fresh -= 1
-      minutes += 1
+      if queue:
+         minutes += 1
+
       
    return minutes if fresh == 0 else -1
 
