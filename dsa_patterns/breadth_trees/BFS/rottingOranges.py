@@ -53,3 +53,18 @@ if __name__ == "__main__":
 # One rotten orange can spread rot 4 directions (up, down, left, right)
 # We increment the minutes counter after processing one full BFS level
 # If some oranges remain we should return -1
+
+
+# TIME COMPLEXITY
+# During BFS how many times can a single orange enter the queue -> A single orange can enter the queue once 
+# THe grid has m rows and n columns 
+# The total time complexity is -> O(mn)
+# The grid scan is -> O(mn)
+# BFS -> each cell processed once -> O(mn)
+# Total O(mn) + O(mn) = O(mn)
+
+# SPACE COMPLEXITY
+# Two things use space : the queue and the direction list
+# In the worst case, the queue can hold almost al cells 
+# The rot spreads and many cells maybe in the queue across levels
+# Final space complexity O(mn)
