@@ -47,3 +47,28 @@ if __name__ == "__main__":
 # In a deque, elements can enter either by inserting at the front (push_front) or inserting at the rear (push_back), and they can leave either by removing from the front (pop_front) or removing from the rear (pop_back). 
 # Because of this two-way access, deques are useful in algorithms like sliding window problems, BFS variants, and task scheduling where operations from both ends are needed efficiently.
 # Our queue will allows us to store courses with in_degree of 0 (because they have no rerequisites and they are ready to be studied)
+
+
+# TIME COMPLEXITY 
+# GRAPH BUILD TIME
+# Loop through every prerequisite once:
+#     append to adjacency list
+#     increment in-degree
+# Time complexity is O(n + m)
+# Creating the empty adjacency list + in-degree array costs O(n)
+# Processing all prerequisite pairs costs O(m)
+# TIME COMPELXITY is O(n + m)
+# During BFS 
+# – Each course is added/removed from the queue at most once
+# – Each prerequisite is processed at most once
+# – So BFS is O(n + m )
+# Graph build is O(n + m )
+# BFS traversal O(n + m)
+# Total is O (n + m)
+
+# SPACE COMPLEXITY
+# Adjacency list –> stores all edges (m)
+# in-degree array stores n values (n)
+# queue can hold courses (n)
+# OVERALL SPACE COMPLEXITY 
+# nodes + edges –> O(n + m)
